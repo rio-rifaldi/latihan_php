@@ -1,13 +1,21 @@
-<?php 
+<?php
+
+      require "fungsi.php";
 
       if(isset($_POST['regis'])){
 
             if($_POST['password'] === $_POST['password2']){
 
-                  echo "<script>
-                  alert('berhasil ditambahkan');
-                  document.location.href = 'registrasi.php';
-                  </script>";
+                  if(regis($_POST)>0){
+
+                        echo "<script>
+                        alert('berhasil ditambahkan');
+                        document.location.href = 'registrasi.php';
+                        </script>";
+                  }else{
+
+                        mysqli_error($conn);
+                  }
 
                   
             }else{
@@ -16,6 +24,8 @@
                   alert('password dan konfirmasi tidak sama');
                   document.location.href = 'registrasi.php';
                   </script>";
+                  
+                  return false;
             }
       }
 

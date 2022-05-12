@@ -145,5 +145,12 @@
         return query($query);
     }
      
+
+    function regis($data){
+
+        global $conn;
+        $username = strtolower(stripslashes($data['username']));
+        $password = 
+    }
      
 ?>
