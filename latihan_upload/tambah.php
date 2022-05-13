@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
             <ul style="padding : 20px" ;>
                   <li>
                         <label for="nama"> NAMA :</label>
-                        <input type="text" name="nama" id="nama" autocomplete="off" required>
+                        <input type="text" name="nama" id="nama" autocomplete="off" required autofocus>
 
                   </li>
                   <li>
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
                   </li>
                   <li>
                         <label for="email"> EMAIL :</label>
-                        <input type="text" name="email" id="email" required autocomplete="off">
+                        <input type="email" name="email" id="email" required autocomplete="off">
 
                   </li>
                   <li>

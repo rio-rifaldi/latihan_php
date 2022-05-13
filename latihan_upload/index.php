@@ -19,7 +19,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>latihan data</title>
-
+      
 </head>
 <body>
       <h1 style="padding: 20px; text-align:center">data management</h1>
@@ -28,8 +28,9 @@
             <input type="text" name="keyword" size="40" autocomplete="off" autofocus placeholder="ketik disini untuk cari...">
             <button type="submit" name="cari">cari</button>
       </form>
-
       <br>
+
+      <a href="tambah.php" target="_self">tambah data</a>
       <table border="1" cellpadding="10" cellspacing="0">
             
       <tr>
@@ -75,7 +76,6 @@
       <br>
       <ul>
 
-            <a href="tambah.php">tambah data</a>
        </ul>
      
      

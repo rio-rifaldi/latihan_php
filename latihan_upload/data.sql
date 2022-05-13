@@ -7,6 +7,7 @@ create table if not exists data_manag(
       alamat varchar(60),
       email varchar(30),
       ket varchar(60),
+      gambar varchar(50),
       primary key(no)
 );
 
@@ -16,7 +17,8 @@ insert into data_manag values(
       324136,
       "bekasi jakarta",
       "riorifaldi2004@gmail.com",
-      "fresh graduate"
+      "fresh graduate",
+      "dora2.jpg"
 );
 insert into data_manag values(
       0,
@@ -24,7 +26,8 @@ insert into data_manag values(
       118351,
       "karawang bekasi",
       "uzky2003@gmail.com",
-      'berkuliah di universitas horizon bekasi karawang'
+      'berkuliah di universitas horizon bekasi karawang',
+      "emon.jpg"
 );
 
 insert into data_manag values(
@@ -33,7 +36,8 @@ insert into data_manag values(
       123463,
       "lamuk bukateja",
       "sekardirgantari46@gmail.com",
-      "lulusan di smkn 1 bukateja (fresh graduate)"
+      "lulusan di smkn 1 bukateja (fresh graduate)",
+      "gunung.jpg"
 );
 insert into data_manag values(
       0,
@@ -41,7 +45,8 @@ insert into data_manag values(
       853573,
       "bukateja",
       "rizkanur89@gmail.com",
-      "lulusan di smkn 1 bukateja (fresh graduate)"
+      "lulusan di smkn 1 bukateja (fresh graduate)",
+      "naruto.jpg"
 );
 insert into data_manag values(
       0,
@@ -49,7 +54,8 @@ insert into data_manag values(
       736024,
       "palembang sumatra selatan",
       "myldfr33@gmail.com",
-      "bersekolah di sma jurusan ipa di sumatra selatan palembang"
+      "bersekolah di sma jurusan ipa di sumatra selatan palembang",
+      "swiss.jpg"
 );
 
 -- select*from data_manag;
