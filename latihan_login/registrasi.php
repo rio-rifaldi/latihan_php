@@ -48,7 +48,7 @@
                         <input type="text" name="username" id="username" autocomplete="off" autofocus required>
                   </li>
                   <li>
-                        <label fo   r="password">password :</label>
+                        <label fo r="password">password :</label>
                         <input type="password" name="password" id="password" autocomplete="off" autofocus required>
                   </li>
                   <li>
