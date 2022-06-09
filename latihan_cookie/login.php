@@ -1,6 +1,13 @@
 <?php 
 
-require 'fungsi.php';
+      require 'fungsi.php';
+      session_start();
+
+      if(isset($_SESSION['login'])){
+
+            header("Location: index.php");
+            exit;
+      }
 
  if(isset($_POST['kirim'])){
 
@@ -14,8 +21,14 @@ require 'fungsi.php';
 
             $row = mysqli_fetch_assoc($result);
           if(  password_verify($password,$row['password'])){
+                $_SESSION['login'] = true;
 
             header("Location: index.php");
+
+            if(isset($_POST['cookie'])){
+
+                  setcookie('login',"rio",time()+100);
+            }
             exit;
           }
      }else{
@@ -45,11 +58,14 @@ require 'fungsi.php';
                   display: block;
             }
             .login{
+                  line-height: 30px;
+                  width: max-content;
+                  padding: 50px;
+                  border: 2px solid black;
                   position: relative;
                   top: 100px;
-                  left : 500px;
-                  line-height: 30px;
-                  padding: 10px;
+                  left: 500px;
+                  border-radius: 20px;
                  
             }
             h1{
@@ -57,6 +73,27 @@ require 'fungsi.php';
                   margin: 10px;
                   padding: 10px;
             }
+            input{
+                  padding: 10px 9px;
+                  border-radius: 10px;
+            }
+            button{
+                  width: 100%;
+                  padding: 12px 10px;
+                  border: none;
+                  background-color: green;
+                  border-radius: 10px;
+                  color: white;
+                  font-size: 17px;
+                  cursor: pointer;
+            }
+            ul{
+                  margin: 0;
+                  padding: 0;
+                  margin: 20px
+
+            }
+        
       </style>
 </head>
 <body>
@@ -75,6 +112,10 @@ require 'fungsi.php';
                   <label for="password"> password</label>
                   <input type="password" name="password" id="password" required autocomplete="off"
                   autofocus placeholder="password" size="30">
+            </ul>
+            <ul>
+                  <label for="cookie">remember me</label>
+                  <input type="checkbox" name="cookie" id="cookie">
             </ul>
             <button type="submit" name="kirim" >login</button>
       </form>

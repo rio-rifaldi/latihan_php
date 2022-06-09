@@ -1,6 +1,13 @@
 <?php 
 
-require 'fungsi.php';
+      require 'fungsi.php';
+      session_start();
+
+      if(isset($_SESSION['login'])){
+
+            header("Location: index.php");
+            exit;
+      }
 
  if(isset($_POST['kirim'])){
 
@@ -14,6 +21,7 @@ require 'fungsi.php';
 
             $row = mysqli_fetch_assoc($result);
           if(  password_verify($password,$row['password'])){
+                $_SESSION['login'] = true;
 
             header("Location: index.php");
             exit;
